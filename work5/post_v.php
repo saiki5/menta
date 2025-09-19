@@ -1,7 +1,12 @@
 <?php foreach ($posts as $post): ?>
     <div class="post">
-        <p><strong><?= $post->getName(); ?></strong></p>
-        <p><?= $post->getContent(); ?></p>
-        <small><?= $post->getCreatedAt(); ?></small>
+        <div class="meta">
+            <strong><?= $post->getName() ?></strong>
+            (<?= $post->getCreatedAt() ?>)
+            <a class="delete" href="?delete=<?= $post->getId() ?>" onclick="return confirm('削除しますか？')">[削除]</a>
+        </div>
+        <div>
+            <?= $post->getContent() ?>
+        </div>
     </div>
 <?php endforeach; ?>

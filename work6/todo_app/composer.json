@@ -1,0 +1,11 @@
+{
+    "name": "waltuka/todo_app",
+    "autoload": {
+        "psr-4": {
+            "Waltuka\\TodoApp\\": "src/"
+        }
+    },
+    "require": {
+        "respect/validation": "^2.4"
+    }
+}
